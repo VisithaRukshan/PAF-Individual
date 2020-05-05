@@ -187,12 +187,12 @@ public class PaymentRepository {
 	//CardUpdate
 	public void update(Payment p1) {
 		
-		String sql = "update payment set cardNo=?, cvv=? where pname=?";
+		String sql = "update payment set cardNo=?, cvv=? where apno=?";
 		try {
 			PreparedStatement pst = con.prepareStatement(sql);
 			pst.setString(1, p1.getCardNo());
 			pst.setString(2, p1.getCvv());
-			pst.setString(3, p1.getPname());
+			pst.setString(3, p1.getApno());
 			pst.executeUpdate();
 			
 			
