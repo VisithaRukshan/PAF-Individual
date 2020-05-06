@@ -432,12 +432,13 @@ h3 {
   /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #0181f5 0%, #5db2ff 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #0181f5 0%, #5db2ff 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(to right, #0119f5 0%, #208bf0 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0181f5', endColorstr='#5db2ff',GradientType=1 );
-  /* IE6-9 */
   color: #fff;
   display: inline-block;
+  position: absolute;
+  top: 92%;
+  left: 40%;
   padding: 8px 32px;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
@@ -454,7 +455,7 @@ h3 {
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  cursor: pointer;
+  cursor: pointer; 
 }
 
 /* line 29, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_btn.scss */

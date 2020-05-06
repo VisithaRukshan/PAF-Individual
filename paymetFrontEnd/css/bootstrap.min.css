@@ -1207,10 +1207,18 @@ pre code {
         max-width: 41.666667%
     }
     .col-md-6 {
+        background-color: rgba(248, 249, 250, 0.7 );
+        border: solid ;
+        border-color: black;
+        top: 30px;
         -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
-        max-width: 50%
+        max-width: 50%;
+        max-height: fit-content
+        
+        
+        
     }
     .col-md-7 {
         -webkit-box-flex: 0;
@@ -1228,7 +1236,7 @@ pre code {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 75%;
         flex: 0 0 75%;
-        max-width: 75%
+        max-width: 100%
     }
     .col-md-10 {
         -webkit-box-flex: 0;
@@ -1767,7 +1775,10 @@ pre code {
     width: 100%;
     max-width: 100%;
     margin-bottom: 1rem;
-    background-color: transparent
+    background-color: #04476117;
+    position: absolute;
+    left: -90px
+
 }
 
 .table td,
@@ -5179,7 +5190,10 @@ tbody.collapse.show {
 
 .alert {
     position: relative;
-    padding: .75rem 1.25rem;
+    align-content: center;
+    width: 405px;
+    height: 60px;
+    padding: 1rem 10rem;
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: .25rem
@@ -5234,6 +5248,7 @@ tbody.collapse.show {
 }
 
 .alert-success {
+    width: 100%;
     color: #155724;
     background-color: #d4edda;
     border-color: #c3e6cb
@@ -5276,6 +5291,7 @@ tbody.collapse.show {
 }
 
 .alert-danger {
+    width: 100%;
     color: #721c24;
     background-color: #f8d7da;
     border-color: #f5c6cb
@@ -5686,7 +5702,7 @@ button.close {
     min-height: calc(100% - (.5rem * 2))
 }
 
-.modal-content {
+.modal-update {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5697,10 +5713,31 @@ button.close {
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
-    background-color: #fff;
+    background-color: rgb(214, 250, 236);
     background-clip: padding-box;
     border-radius: .3rem;
-    outline: 0
+    outline: 0;
+    border: solid;
+    border-color: black
+}
+
+.modal-delete {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: rgb(250, 214, 214);
+    background-clip: padding-box;
+    border-radius: .3rem;
+    outline: 0;
+    border: solid;
+    border-color: black
 }
 
 .modal-backdrop {

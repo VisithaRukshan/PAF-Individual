@@ -10,12 +10,14 @@
     
     <!-- CSS here -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/style.css">  
     
 
 </head>
 
 <body>
+  
+
 
     <!--Form Start-->
     <div class="container">
@@ -24,50 +26,50 @@
     		<div class="col-md-6">
     			<h1 class="text-center">PAYMENT</h1><br>
 
-    			<!--Form row start-->
+    			<!--Form start-->
 				<form id="formPayment">
                     <label class="label col-md-3 control-label" for="ExampleInput1">Appointment No :</label>
                     <div class="col-md-9">
                         <input type="text" class="form-control" id="apno" name="apno" placeholder="Appointment No" maxlength="6" required>
                     </div><br>
-                    <!--Form row end-->
+                   
 
-                    <!--Form row start-->
+                 
                     <label class="label col-md-3 control-label" for="ExampleInput1">Date :</label>
                     <div class="col-md-9">
                         <input type="date" class="form-control" id="date" name="date" placeholder="Date" required>
                     </div><br>
-                    <!--Form row end-->
+                   
 
 
-                    <!--Form row start-->
+                   
                     <label class="label col-md-3 control-label" for="ExampleInput1">Time :</label>
                     <div class="col-md-9">
                         <input type="time" class="form-control" id="time" name="time" placeholder="Time" required>
                     </div><br>
-                    <!--Form row end-->
+                   
 
-                    <!--Form row start-->
+                   
                     <label class="label col-md-3 control-label" for="ExampleInput1">Card No :</label>
                     <div class="col-md-9">
                         <input type="cardNo" class="form-control" id="cardNo" name="cardNo" placeholder="Card No" maxlength="16" pattern="[0-9]*" required >
                        
                     </div><br>
-                    <!--Form row end-->
+                    
 					
-					<!--Form row start-->
+					
                     <label class="label col-md-3 control-label" for="ExampleInput1">CVV No :</label>
                     <div class="col-md-9">
                         <input type="cvv" class="form-control" id="cvv" name="cvv" placeholder="CVV No" maxlength="3" required >
                        
                     </div><br>
-                    <!--Form row end-->
+                  
                     
                     <div id="alertSuccess" class="alert alert-success"></div>
                     <div id="alertError" class="alert alert-danger"></div><br>
 
                     &nbsp; &nbsp;<button type="button" id="btnsubmit" class="boxed-btn31">Pay</button>
-                    <!--&nbsp; &nbsp;<input type="hidden" id="hidbtnsubmit" name="hidbtnsubmit" value="">-->
+                 
 				</form>
     		</div>
     		<div class="col-md-3"></div>
@@ -107,7 +109,7 @@
             <!-- Update Modal -->
 			  <div class="modal fade" id="myModal" role="dialog">
 			    <div class="modal-dialog modal-lg">
-			      <div class="modal-content">
+			      <div class="modal-update">
 			        <div class="modal-header">
 			          <button type="button" class="close" data-dismiss="modal">&times;</button>
 			         
@@ -121,23 +123,21 @@
 
 				          <div class="form-group">
 						    <label for="exampleInputEmail1">Card No :</label>
-						    <input type="text" class="form-control" id="editBox2" aria-describedby="emailHelp"> 
+						    <input type="text" class="form-control" id="editBox2" aria-describedby="emailHelp" maxlength="16" pattern="[0-9]*"> 
 						  </div>
        
 
 						  <div class="form-group">
 						    <label for="exampleInputEmail1">CVV No :</label>
-						    <input type="tel" class="form-control" id="editBox3" aria-describedby="emailHelp"> 
+						    <input type="tel" class="form-control" id="editBox3" aria-describedby="emailHelp" maxlength="3"> 
 						  </div>
 
 					  
 			        </div>
-
 			        <div class="modal-footer">
 			          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 					  <button type="button" class="btn btn-success" onclick="UpdateResult()" data-dismiss="modal">Save</button>
 			        </div>
-
 			      </div>
 			    </div>
               </div>
@@ -147,7 +147,7 @@
             <!-- Delete Modal -->
 			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                  <div class="modal-content">
+                  <div class="modal-delete">
                     <div class="modal-header">
                       <h5 class="modal-title" id="exampleModalLabel">Deleting Payemt</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -164,9 +164,7 @@
                   </div>
                 </div>
             </div>
-
-            </div>
-            
+            </div> 
         </div>
     </div><br><br><br><br>
     <!--Table End-->
@@ -179,7 +177,7 @@
     <script src="js/service.js"></script>
     
 
-<!--Form Validation Called-->
+<!--Form Validation-->
     <script>
         $(document).ready(function()
         {
@@ -212,8 +210,6 @@
             }
 
             //If valid
-       //     var doctor = Validation($("#docID").val().trim(), $("#docName").val().trim(), $("#ddlSpecialization").val(), $("#docContactNo").val().trim(), $("#docPassword").val().trim());
-       //     $("#tableDoctor").append(doctor);
 
             var obj = {
                 "apno" : $("#apno").val(),
@@ -229,6 +225,7 @@
         });
 
     </script>
+
 
 </body>
 
