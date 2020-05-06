@@ -146,44 +146,6 @@ public class PaymentRepository {
 	
 	
 	
-	//InsertCard
-/*	public void createCard(Payment p1) {
-		
-		String pname = null;
-		
-		String sql1 = "select * from payment where apno ="+p1.getApno();
-		try {
-			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery(sql1);
-			
-			while (rs.next()) {
-				pname = rs.getString("pname"); 
-				
-				System.out.println(pname);
-			}
-			
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		
-		String sql = "insert into card values (?,?,?)";
-		try {
-			PreparedStatement pst = con.prepareStatement(sql);
-			pst.setString(1, pname);
-			pst.setString(2, p1.getCardNo());
-			pst.setString(3, p1.getCvv());
-			pst.executeUpdate();
-			
-			
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-			
-	}*/
-	
-	
-	
 	//CardUpdate
 	public void update(Payment p1) {
 		
@@ -220,24 +182,6 @@ public class PaymentRepository {
 		
 	}
 	
-	
-	
-	//Delete
-	public void deleteCard(int pid) {
-		
-		String sql = "delete from card where pid=?";
-		try {
-			PreparedStatement pst = con.prepareStatement(sql);
-			pst.setInt(1, pid);
-			pst.executeUpdate();
-			
-			
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-		
-	}
-	
-	
+
 	
 }
