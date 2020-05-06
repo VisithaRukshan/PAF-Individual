@@ -1,3 +1,5 @@
+//set the environment
+
 function apiConfig(){
 	return "http://localhost:8080/";
 };
@@ -16,7 +18,6 @@ function saveNewRecord(obj){
         data : JSON.stringify(obj),
         
         success: function(){
-            //$( "#feeds" ).load( "doctor.html" );
             console.log("Added"); 
             $("#alertSuccess").text("Inserted Successfully!");
             $("#alertSuccess").show();
@@ -44,7 +45,6 @@ function fetchResult(){
         dataType: 'json',
         success: function(result){
             console.log("fetched");
-            //console.log(result);
             
             var data = JSON.parse(JSON.stringify(result));
             $.each(data, function(i, item) {
