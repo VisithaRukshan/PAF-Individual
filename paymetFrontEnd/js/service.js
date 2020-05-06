@@ -1,3 +1,9 @@
+function apiConfig(){
+	return "http://localhost:8080/";
+};
+
+
+//Controlling part begin
 //Insert
 function saveNewRecord(obj){
     $.ajax({	
@@ -5,7 +11,7 @@ function saveNewRecord(obj){
             "Content-Type": "application/json"
         },
         type: 'POST',
-        url: 'http://localhost:8080/payment/webapi/payment/add',
+        url: apiConfig()+ 'payment/webapi/payment/add',
         dataType: 'json',
         data : JSON.stringify(obj),
         
@@ -34,7 +40,7 @@ function fetchResult(){
             "Content-Type": "application/json"
         },
         type: 'GET',
-        url: 'http://localhost:8080/payment/webapi/payment/viewall',
+        url:apiConfig() +'payment/webapi/payment/viewall',
         dataType: 'json',
         success: function(result){
             console.log("fetched");
@@ -84,7 +90,7 @@ function UpdateResult(){
 		        'Content-Type': 'application/json' 
 		    },
 		type: 'PUT',
-			url: 'http://localhost:8080/payment/webapi/payment/update',
+			url:apiConfig()+ 'payment/webapi/payment/update',
 			dataType: 'json',
 			
 			data : JSON.stringify(obj),
@@ -107,7 +113,7 @@ function DeleteResult() {
 	console.log(no);
 	$.ajax({	
 		type: 'DELETE',
-			url: 'http://localhost:8080/payment/webapi/payment/delete/'+no,
+			url: apiConfig()+'payment/webapi/payment/delete/'+no,
 			dataType: 'json',			
 			success: function(){
                 fetchResult();
